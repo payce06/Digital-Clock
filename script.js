@@ -20,3 +20,11 @@ function updateClock() {
     } else if (hours >= 12 && hours < 17) {
         greeting.textContent = "Good Afternoon ☀️";
     } else if (hours >= 17 && hours < 21) {
+        greeting.textContent = "Good Evening 🌇";
+    } else {
+        greeting.textContent = "Good Night 🌙";
+    }
+}
+
+setInterval(updateClock, 1000);
+updateClock();
