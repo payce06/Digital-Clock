@@ -12,19 +12,3 @@ function updateClock() {
         mins.toString().padStart(2, '0'),
         secs.toString().padStart(2, '0')
     ].join(':');
-
-    clock.textContent = formatted;
-
-    if (hours >= 5 && hours < 12) {
-        greeting.textContent = "Godd Morning 🌅";
-    } else if (hours >= 12 && hours < 17) {
-        greeting.textContent = "Good Afternoon ☀️";
-    } else if (hours >= 17 && hours < 21) {
-        greeting.textContent = "Good Evening 🌇";
-    } else {
-        greeting.textContent = "Good Night 🌙";
-    }
-}
-
-setInterval(updateClock, 1000);
-updateClock();
